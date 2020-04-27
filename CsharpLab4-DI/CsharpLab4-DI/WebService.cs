@@ -13,22 +13,63 @@ namespace CsharpLab4_DI
                 //проверка на Null try catch
                 _service = service;
                 _service.Connect();
-            }
-            public bool SignInToService(string login, string pwd) {
-                //обработка с помощью try catch
-                return _service.SignIn(login, pwd);
-            }
-            public void CheckMailBox() {
-                _service.CheckMailBox();
-            }
-            public void SendMail(string msg, string email){
-                _service.SendMail(msg, email);
-            }
-            public void DoSearch(string query) {
-                _service.DoSearch(query);
-            }
-            public void ShowMap(string address) {
+        }
+        /*
+         WebService
+	        - _service : IWebServiceController (readonly)
+
+            ConnectToService()			->Connect
+
+	        OpenMail()					->LogIntoMail
+            SearchText				->DoSearch(string)
+            SearchImage		-> DoImageSearch
+            SearchAddress(string) FindPlace		->FindPlace
+            FindRouteTo()			-> BuildRoute()
+            OpenStorage		-> ConnectToDrive
+            ReadNews		-> OpenNewsFeed
+            TranslateText  		-> Translate
+            OpenCalendar			-> ShowCalendar
+            OpenPlaylist	-> ListenToMusic
+
+                
+                    
+                
+             */
+        public bool OpenMail(string login, string pwd) {
+            //обработка с помощью try catch
+            return _service.LogIntoMail();
+        }
+        public void SearchImage(){
+            _service.DoImageSearch();
+        }
+        public void SearchText(string query) {
+            _service.DoSearch(query);
+        }
+        public void FindPlace(string address) {
             _service.ShowMap(address);
+        }
+        public void FindRouteTo(){
+            _service.BuildRoute();
+        }
+        public void OpenStorage()
+        {
+            _service.ConnectToDrive();
+        }
+        public void ReadNews()
+        {
+            _service.OpenNewsFeed();
+        }
+        public void TranslateText()
+        {
+            _service.Translate();
+        }
+        public void OpenCalendar()
+        {
+            _service.ShowCalendar();
+        }
+        public void OpenPlaylist ()
+        {
+            _service.ListenToMusic();
         }
     }
 }

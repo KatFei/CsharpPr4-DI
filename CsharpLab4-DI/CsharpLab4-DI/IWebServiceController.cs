@@ -10,21 +10,16 @@ namespace CsharpLab4_DI
     /// </summary>
     public interface IWebServiceController
     {
+        bool Connect();
         /// <summary>
         /// Documentation that describes the method goes here.
         /// </summary>
-        /// <param name="n">
-        /// Parameter n requires an integer argument.
-        /// </param>
-        /// <returns>
-        /// The method returns an integer.
-        /// </returns>
-        bool SignIn(string login, string pwd);
+        bool LogIntoMail();
 
         /// <summary>
         /// Documentation that describes the method goes here.
         /// </summary>
-        void CheckMailBox();
+        void BuildRoute();
 
         /// <summary>
         /// Documentation that describes the method goes here.
@@ -32,7 +27,7 @@ namespace CsharpLab4_DI
         /// <param name="n">
         /// Parameter n requires an integer argument.
         /// </param>
-        void SendMail(string msg, string email);
+        void DoImageSearch();
 
         /// <summary>
         /// Documentation that describes the method goes here.
@@ -49,8 +44,11 @@ namespace CsharpLab4_DI
         /// Parameter n requires an integer argument.
         /// </param>
         void ShowMap(string address);
-
-        bool Connect();
+        void ConnectToDrive();
+        void OpenNewsFeed();
+        void Translate();
+        void ShowCalendar();
+        void ListenToMusic();
     }
     
 }

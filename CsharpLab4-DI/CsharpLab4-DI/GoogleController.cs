@@ -19,20 +19,45 @@ namespace CsharpLab4_DI
         public void ShowMap(string address) {
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
         }
-        public bool SignIn(string login, string pwd)
+        public bool LogIntoMail()
         {
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
             return true;
         }
-        public void CheckMailBox()
+        public void BuildRoute()
         {
             //if signedin
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
         }
-        public void SendMail(string msg, string email)
+        public void DoImageSearch()
         {
             //if signedin
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
+        }
+
+        public void ConnectToDrive()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OpenNewsFeed()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Translate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowCalendar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ListenToMusic()
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -55,20 +80,45 @@ namespace CsharpLab4_DI
         {
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
         }
-        public bool SignIn(string login, string pwd)
+        public bool LogIntoMail()
         {
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
             return true;
         }
-        public void CheckMailBox()
+        public void BuildRoute()
         {
             //if signedin
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
         }
-        public void SendMail(string msg, string email)
+        public void DoImageSearch()
         {
             //if signedin
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
+        }
+
+        public void ConnectToDrive()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OpenNewsFeed()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Translate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowCalendar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ListenToMusic()
+        {
+            throw new NotImplementedException();
         }
     }
     /// <summary>
@@ -92,20 +142,45 @@ namespace CsharpLab4_DI
         {
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
         }
-        public bool SignIn(string login, string pwd)
+        public bool LogIntoMail()
         {
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
             return true;
         }
-        public void CheckMailBox()
+        public void BuildRoute()
         {
             //if signedin
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
         }
-        public void SendMail(string msg, string email)
+        public void DoImageSearch()
         {
             //if signedin
             Program.Log(this.GetType().Name, MethodBase.GetCurrentMethod().Name);
+        }
+
+        public void ConnectToDrive()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OpenNewsFeed()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Translate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowCalendar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ListenToMusic()
+        {
+            throw new NotImplementedException();
         }
     }
 }
