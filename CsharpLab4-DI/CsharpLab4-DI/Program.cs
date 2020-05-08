@@ -7,8 +7,7 @@ using System.Reflection;
 для веб-сервисов компаний (Google, Yandex и Baidu) и 
 класса, в который данные сервисы встраиваются. 
     Класс ServiceController
-
-    Класс Client
+    Класс WebService
     На вход конструктору подается ServiceController с параметрами
     Методы для работы со следующими службами:
     карты, поисковая система, почта 
@@ -33,12 +32,11 @@ namespace CsharpLab4_DI
                 map {m}         calendar {c}
                 route {r}       playmusic {p}
              */
-            args = new string[]{ "google","search","image","route","music"};
+            
             string[] argsChoices = { "email", "search", "image", "map", "route", "drive", 
                 "news", "translator", "calendar", "playmusic" };
             WebService service = null;
-            //проверка c помощью исключений?
-            if (args.Length > 0)
+            try
             {
                 if (args[0].ToString().ToLower().StartsWith("g"))
                 {
@@ -55,9 +53,16 @@ namespace CsharpLab4_DI
                 else
                     Console.WriteLine("Wrong service name");
             }
+            catch
+            {
+                Console.WriteLine("Fail to read parameters from console");
+                //для тестирования
+                service = new WebService(new GoogleController());
+                args = new string[] { "google", "search", "image", "route", "music" };
+            }
             if (service != null) {
                 foreach (string arg in args) {
-                    Console.WriteLine(arg);
+                    Console.WriteLine(arg[0].ToString().ToLower());
                     switch (arg[0].ToString().ToLower()) {
                         case "e":
                             service.OpenMail("login", "pwd");
